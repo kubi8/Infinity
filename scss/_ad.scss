@@ -1,0 +1,57 @@
+.ad{
+    position: relative;
+    overflow-x: hidden;
+    &__cover{
+        position: absolute;
+        display: flex;
+        height: 100%;
+        max-height: 742px;
+        width: 100%;
+        top: 0;
+
+        &__back{
+            background-color: $alpha1;
+            height: 100%;
+            width: 50%;
+            top: 0;
+            bottom: 0;
+            padding: 10px;
+            color: $blue1;
+            transition: transform .5s;
+            @include center;
+            flex-wrap: wrap;
+            align-items: flex-start;
+            @media(min-width: 1024px){
+                align-items: center;
+                padding: 30px;
+                font-size: 1.8rem;
+            }
+        }
+        &__left{
+            transform: translateX(-50vw);
+            background-color: $alpha3;
+        }
+        &__right{
+            transform: translateX(50vw);
+            background-color: $alpha3;
+        }
+        &__text{
+            color: $white1;
+        }
+    }
+
+
+
+}
+.active-cover{
+    transform: translateX(0);
+}
+.active-cover{
+    transform: translateX(0);
+}
+
+.ad--span {
+    font-weight: 900;
+    font-size: 2rem;
+    color: $white1;
+}

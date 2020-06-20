@@ -1,0 +1,15 @@
+.geolocation{
+    background-image: url('../img/wwdback.jpg');
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &__content{
+        overflow: hidden;
+    }
+    &__wrap{
+        background-color: transparent;
+        width: 90%;
+        height: auto;
+        margin: 20px 0;
+    }
+}

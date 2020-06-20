@@ -1,0 +1,37 @@
+html{
+    box-sizing: border-box;
+}
+*, ::before, ::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+    scroll-behavior: smooth;
+}
+body{
+    font-family: 'Lato', sans-serif;
+    font-size: 20px;
+    background-color: $white1;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: (7, minmax(200px, max-content));
+}
+.scrollup {
+    position: fixed;
+    bottom: 1%;
+    right: .5%;
+    width: 3%;
+    height: 3%;
+    min-height: 30px;
+    min-width: 30px;
+    z-index: 1;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    display: none;
+}
+.fas {
+    font-size: 3rem;
+    line-height: 50%;
+    color: $blue6;
+    opacity: .7;
+}

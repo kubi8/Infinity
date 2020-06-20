@@ -1,0 +1,31 @@
+@mixin center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+@mixin link {
+    position: absolute;
+    width: 115px;
+    height: 25px;
+    border-radius: 15px;
+    background-image: linear-gradient($blue1 0%, $blue6 40%, $blue3 60%, $blue1 100%);
+    font-size: 1rem;
+    padding: 15px;
+    color: $white1;
+    text-decoration: none;
+    border: 1px solid $blue11;
+    user-select: none;
+    @include center;
+}
+@mixin contact {
+    width: 115px;
+    height: 25px;
+    border-radius: 25px;
+    background-image: linear-gradient($blue1 0%, $blue6 40%, $blue3 60%, $blue1 100%);
+    font-size: 1rem;
+    color: $white1;
+    text-decoration: none;
+    border: 1px solid $blue11;
+    user-select: none;
+
+}
