@@ -105,14 +105,16 @@ const email_reg = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"
 const text_reg = /^[a-zA-Z0-9]{10,}$/
 
 
+const name = document.querySelector('#name');
+const surname = document.querySelector('#surname');
+const email = document.querySelector('#email');
+const text = document.querySelector('#textarea');
+
 
 function validation(){
   event.preventDefault();
 
-  const name = document.querySelector('#name');
-  const surname = document.querySelector('#surname');
-  const email = document.querySelector('#email');
-  const text = document.querySelector('#textarea');
+
 
   let errors = [];
 
@@ -187,6 +189,55 @@ function makeOK(){
   }
   setTimeout(deleteMessage, 1000);
 }
+
+function colorValidation(){
+  if (event.target.name == 'name') {
+    if(event.target.value.length >= 4) {
+        event.target.classList.add('valid');
+        event.target.classList.remove('invalid');
+    } else {
+        event.target.classList.add('invalid');
+        event.target.classList.remove('valid');
+    }
+  }
+
+  if (event.target.name == 'surname') {
+    if(event.target.value.length >= 4) {
+      event.target.classList.add('valid');
+      event.target.classList.remove('invalid');
+    } else {
+      event.target.classList.add('invalid');
+      event.target.classList.remove('valid');
+    }
+  }
+
+  if (event.target.name == 'email') {
+    if (email_reg.test(event.target.value)) {
+      event.target.classList.add('valid');
+      event.target.classList.remove('invalid');
+    } else {
+      event.target.classList.add('invalid');
+      event.target.classList.remove('valid');
+    }
+  }
+
+  if (event.target.name == 'textarea') {
+    if(event.target.value.length >= 15) {
+      event.target.classList.add('valid');
+      event.target.classList.remove('invalid');
+    } else {
+      event.target.classList.add('invalid');
+      event.target.classList.remove('valid');
+    }
+  }
+}
+
+
+
+name.addEventListener('input', colorValidation);
+surname.addEventListener('input', colorValidation);
+email.addEventListener('input', colorValidation);
+text.addEventListener('input', colorValidation);
 
 contactForm.addEventListener('submit', validation);
 window.addEventListener("load", slider);

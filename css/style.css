@@ -646,7 +646,6 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  border: 3px solid red;
 }
 
 .footer__wrap-err {
@@ -870,5 +869,13 @@ body {
   font-size: 1rem;
   border-radius: 2px;
   text-align: center;
+}
+
+.invalid {
+  color: #ff0000;
+}
+
+.valid {
+  color: #000;
 }
 /*# sourceMappingURL=style.css.map */

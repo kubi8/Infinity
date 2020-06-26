@@ -3,13 +3,10 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: 3px solid red;
 
     &__wrap-err{
         height: 35px;
         width: 100%;
-        // border: 1px solid green;
-        // padding: 3px;
     }
     &__title{
         margin: 10px 0 0 0;
@@ -155,4 +152,10 @@
     font-size: 1rem;
     border-radius: 2px;
     text-align: center;
+}
+.invalid{
+    color: $red1;
+}
+.valid{
+    color: $black1;
 }
